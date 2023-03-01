@@ -14,7 +14,7 @@ justify-content: center;
 align-items:center;
 gap:18px;
 margin-top:44px;
-margin-bottom:26px;
+margin-bottom:51px;
 `;
 const TextoLogo = styled.p`
 font-family: 'Righteous';
