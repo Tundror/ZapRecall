@@ -9,6 +9,8 @@ import party from "./assets/party.png"
 import sad from "./assets/sad.png"
 import setaPlay from "./assets/seta_play.png"
 import setaVirar from "./assets/seta_virar.png"
+import Logo from "./Logo"
+import Deck from "./Deck"
 
 function App() {
   const cards = [
@@ -24,15 +26,20 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      
+      <ContainerApp>
+        <Logo />
+
+        
+      </ContainerApp>
     </>
   );
 }
 const ContainerApp = styled.div`
-background-color:#FB6B6B;
-height:100%;
-width:100%;
+display:flex;
+justify-content: center;
+align-items:center;
 `;
+
 
 
 export default App;
