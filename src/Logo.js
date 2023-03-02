@@ -1,10 +1,10 @@
 import logo from "./assets/logo.png"
 import styled from 'styled-components';
-export default function Logo(){
-    return(
+export default function Logo() {
+    return (
         <LogoContainer>
-          <ImgLogo src={logo}></ImgLogo>
-          <TextoLogo>ZapRecall</TextoLogo>
+            <ImgLogo src={logo}></ImgLogo>
+            <TextoLogo>ZapRecall</TextoLogo>
         </LogoContainer>
     )
 }

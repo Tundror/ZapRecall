@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import GlobalStyle from './globalStyles'
 import iconeCerto from "./assets/icone_certo.png"
@@ -13,14 +13,14 @@ import Logo from "./Logo"
 import Deck from "./Deck"
 
 function App() {
-  
+const [indexState, setIndexState] = useState(0)
   return (
     <>
       <GlobalStyle />
       <ContainerApp>
         <Logo />
-        <Deck />
-        
+        <Deck indexState={indexState} setIndexState={setIndexState} />
+
       </ContainerApp>
     </>
   );
