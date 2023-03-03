@@ -48,50 +48,50 @@ function ItemDeck(props) {
     }
     return (
         clicouPlay ?
-            <CardAberto>
+            <CardAberto data-test="flashcard">
                 {!clicouVirar ?
                     <>
-                        <PerguntaAberta>{props.cards[index].question}</PerguntaAberta>
-                        <ContainerSetaVirar><SetaVirar onClick={virarPergunta} src={setaVirar}></SetaVirar></ContainerSetaVirar>
+                        <PerguntaAberta data-test="flashcard-text">{props.cards[index].question}</PerguntaAberta>
+                        <ContainerSetaVirar><SetaVirar data-test="turn-btn" onClick={virarPergunta} src={setaVirar}></SetaVirar></ContainerSetaVirar>
                     </>
                     :
                     <>
-                        <PerguntaAberta>{props.cards[index].answer}</PerguntaAberta>
+                        <PerguntaAberta data-test="flashcard-text">{props.cards[index].answer}</PerguntaAberta>
                         <ContainerZap>
-                            <NaoLembrei onClick={() => respondeuCard("Não lembrei")}>Não lembrei</NaoLembrei>
-                            <QuaseNaoLembrei onClick={() => respondeuCard("Quase não lembrei")}>Quase não lembrei</QuaseNaoLembrei>
-                            <Zap onClick={() => respondeuCard("Zap!")}>Zap!</Zap>
+                            <NaoLembrei data-test="no-btn" onClick={() => respondeuCard("Não lembrei")}>Não lembrei</NaoLembrei>
+                            <QuaseNaoLembrei data-test="partial-btn" onClick={() => respondeuCard("Quase não lembrei")}>Quase não lembrei</QuaseNaoLembrei>
+                            <Zap data-test="zap-btn" onClick={() => respondeuCard("Zap!")}>Zap!</Zap>
                         </ContainerZap>
                     </>
                 }
             </CardAberto>
             :
-            <CardFechado>
+            <CardFechado data-test="flashcard">
                 {(resposta === "Não lembrei") ?
-                    <>
-                        <PerguntaFechadaR1>{props.numPergunta}</PerguntaFechadaR1>
-                    </>
+                    <div>
+                        <PerguntaFechadaR1 data-test="flashcard-text">{props.numPergunta}</PerguntaFechadaR1>
+                    </div>
                     : (resposta === "Quase não lembrei") ?
-                        <>
-                            <PerguntaFechadaR2>{props.numPergunta}</PerguntaFechadaR2>
-                        </>
+                        <div>
+                            <PerguntaFechadaR2 data-test="flashcard-text">{props.numPergunta}</PerguntaFechadaR2>
+                        </div>
                         : (resposta === "Zap!") ?
-                            <>
-                                <PerguntaFechadaR3>{props.numPergunta}</PerguntaFechadaR3>
-                            </>
+                            <div>
+                                <PerguntaFechadaR3 data-test="flashcard-text">{props.numPergunta}</PerguntaFechadaR3>
+                            </div>
                             :
-                            <>
-                                <PerguntaFechada>{props.numPergunta}</PerguntaFechada>
-                            </>}
+                            <div>
+                                <PerguntaFechada data-test="flashcard-text">{props.numPergunta}</PerguntaFechada>
+                            </div>}
                 <ContainerSetaPlay>
                     {(resposta === "Não lembrei") ?
-                        <img src={iconeErro}></img>
+                        <img data-test="no-icon" src={iconeErro}></img>
                         : (resposta === "Quase não lembrei") ?
-                            <img src={iconeQuase}></img>
+                            <img data-test="partial-icon" src={iconeQuase}></img>
                             : (resposta === "Zap!") ?
-                                <img src={iconeCerto}></img>
+                                <img data-test="zap-icon" src={iconeCerto}></img>
                                 :
-                                <img onClick={mostrarPergunta} src={setaPlay}></img>
+                                <img data-test="play-btn" onClick={mostrarPergunta} src={setaPlay}></img>
                     }
                 </ContainerSetaPlay>
             </CardFechado>

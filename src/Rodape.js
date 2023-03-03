@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export default function Rodape(props){
 return(
-    <Footer>
+    <Footer data-test="footer">
       {props.numPerguntasRespondidas}/{props.perguntas.length} Concluídos
     </Footer>
 )
