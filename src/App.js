@@ -13,14 +13,12 @@ import Logo from "./Logo"
 import Deck from "./Deck"
 
 function App() {
-const [indexState, setIndexState] = useState(0)
   return (
     <>
       <GlobalStyle />
       <ContainerApp>
         <Logo />
-        <Deck indexState={indexState} setIndexState={setIndexState} />
-
+        <Deck />
       </ContainerApp>
     </>
   );
