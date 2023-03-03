@@ -223,6 +223,9 @@ align-items: center;
 text-align: center;
 display:flex;
 justify-content:center;
+&:hover{
+    cursor: pointer;
+}
 `;
 const QuaseNaoLembrei = styled.div`
 width: 85px;
@@ -239,6 +242,9 @@ align-items: center;
 text-align: center;
 display:flex;
 justify-content:center;
+&:hover{
+    cursor: pointer;
+}
 `;
 const Zap = styled.div`
 width: 85px;
@@ -255,6 +261,9 @@ align-items: center;
 text-align: center;
 display:flex;
 justify-content:center;
+&:hover{
+    cursor: pointer;
+}
 `;
 
 const ContainerZap = styled.div`

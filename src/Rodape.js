@@ -8,7 +8,7 @@ return(
     </Footer>
 )
 }
-const Footer=styled.div`
+const Footer=styled.footer`
 position: fixed;
 width: 100%;
 height: 70px;
