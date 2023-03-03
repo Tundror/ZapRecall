@@ -107,6 +107,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 gap: 25px;
+margin-bottom:100px;
 `;
 const CardFechado = styled.div`
 width: 300px;

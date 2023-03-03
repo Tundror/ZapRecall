@@ -27,14 +27,14 @@ function App() {
   const perguntas = ["Pergunta 1", "Pergunta 2", "Pergunta 3", "Pergunta 4", "Pergunta 5", "Pergunta 6", "Pergunta 7", "Pergunta 8"]
   const [numPerguntasRespondidas, setNumPerguntasRespondidas] = useState(0)
   return (
-    <>
+    <Wrapper>
       <GlobalStyle />
       <ContainerApp>
         <Logo />
         <Deck numPerguntasRespondidas={numPerguntasRespondidas} setNumPerguntasRespondidas={setNumPerguntasRespondidas} perguntas={perguntas} cards={cards} />
       </ContainerApp>
       <Rodape numPerguntasRespondidas={numPerguntasRespondidas} setNumPerguntasRespondidas={setNumPerguntasRespondidas} perguntas={perguntas}/>
-    </>
+    </Wrapper>
   );
 }
 const ContainerApp = styled.div`
@@ -42,8 +42,10 @@ display:flex;
 justify-content: center;
 align-items:center;
 flex-direction:column;
+`;
+const Wrapper = styled.div`
 position:relative;
-margin-bottom:70px;
+min-height: 100vh
 `;
 
 
