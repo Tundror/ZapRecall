@@ -17,6 +17,8 @@ export default function Deck(props) {
                     numPergunta={a}
                     key={a}
                     cards={props.cards}
+                    numPerguntasRespondidas={props.numPerguntasRespondidas}
+                    setNumPerguntasRespondidas={props.setNumPerguntasRespondidas}
                 />)}
         </ContainerDeck>
     )
@@ -40,7 +42,8 @@ function ItemDeck(props) {
             setClicouResposta(true)
             setResposta(resposta)
             setClicouPlay(false)
-            console.log(resposta)
+            props.setNumPerguntasRespondidas(props.numPerguntasRespondidas + 1)
+            console.log(props.numPerguntasRespondidas + 1)
         }
     }
     return (
